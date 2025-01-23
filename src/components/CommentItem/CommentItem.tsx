@@ -3,6 +3,7 @@ import { Comment } from "@utils/PostHelper";
 import CommentList from "@components/CommentList/CommentList";
 import styles from "./CommentItem.module.scss";
 import Button from "@components/Button/ Button";
+import Input from "@components/Input/Input";
 
 interface CommentItemProps {
   comment: Comment;
@@ -42,11 +43,10 @@ const CommentItem: React.FC<CommentItemProps> = ({
 
       {showReplyForm && (
         <form onSubmit={handleReply} className={styles.replyForm}>
-          <input
-            type="text"
-            placeholder="Напишіть відповідь..."
+          <Input
             value={replyText}
-            onChange={(e) => setReplyText(e.target.value)}
+            setValue={setReplyText}
+            placeholder="Leave a reply..."
           />
           <Button isActive={Boolean(replyText.trim())} type="submit">
             Comment

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./PostForm.module.scss";
 import Button from "@components/Button/ Button";
+import Input from "@components/Input/Input";
 
 interface PostFormProps {
   onAddPost: (title: string, content: string) => void;
@@ -24,11 +25,7 @@ const PostForm: React.FC<PostFormProps> = ({ onAddPost }) => {
     <form onSubmit={handleSubmit} className={styles.postForm}>
       <div className={styles.formGroup}>
         <label>Title:</label>
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
+        <Input value={title} setValue={setTitle} placeholder="Enter title" />
       </div>
       <div className={styles.formGroup}>
         <label>Post Content:</label>

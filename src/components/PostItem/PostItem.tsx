@@ -3,6 +3,7 @@ import { Post } from "@utils/PostHelper";
 import CommentList from "@components/CommentList/CommentList";
 import styles from "./PostItem.module.scss";
 import Button from "@components/Button/ Button";
+import Input from "@components/Input/Input";
 
 interface PostItemProps {
   post: Post;
@@ -33,11 +34,10 @@ const PostItem: React.FC<PostItemProps> = ({ post, onAddComment }) => {
       <p>{post.content}</p>
 
       <form onSubmit={handleSubmit} className={styles.addCommentForm}>
-        <input
-          type="text"
-          placeholder="Leave a comment..."
+        <Input
           value={commentText}
-          onChange={(e) => setCommentText(e.target.value)}
+          setValue={setCommentText}
+          placeholder="Leave a comment..."
         />
         <Button isActive={Boolean(commentText.trim())} type="submit">
           Comment
