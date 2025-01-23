@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Post } from "@utils/PostHelper";
+import CommentList from "@components/CommentList/CommentList";
 import styles from "./PostItem.module.scss";
 import Button from "@components/Button/ Button";
 
@@ -42,6 +43,12 @@ const PostItem: React.FC<PostItemProps> = ({ post, onAddComment }) => {
           Comment
         </Button>
       </form>
+
+      <CommentList
+        comments={post.comments}
+        postId={post.id}
+        onAddComment={onAddComment}
+      />
     </div>
   );
 };
