@@ -1,0 +1,22 @@
+.button {
+  padding: var(--btn-padding);
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--color-primary-hover);
+  }
+
+  &.inactive {
+    cursor: not-allowed;
+    opacity: 0.6;
+
+    &:hover {
+      background-color: var(--color-primary);
+    }
+  }
+}
