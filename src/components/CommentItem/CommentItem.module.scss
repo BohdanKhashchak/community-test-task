@@ -6,19 +6,6 @@
     color: var(--color-text);
   }
 
-  button {
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    border: none;
-    padding: var(--btn-padding);
-    border-radius: var(--btn-radius);
-    cursor: pointer;
-
-    &:hover {
-      background-color: var(--color-primary-hover);
-    }
-  }
-
   .replyForm {
     display: flex;
     gap: 0.5rem;

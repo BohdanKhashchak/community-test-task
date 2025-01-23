@@ -31,17 +31,4 @@
       }
     }
   }
-
-  button {
-    padding: var(--btn-padding);
-    background-color: var(--color-primary);
-    color: #fff;
-    border: none;
-    border-radius: var(--btn-radius);
-    cursor: pointer;
-
-    &:hover {
-      background-color: var(--color-primary-hover);
-    }
-  }
 }
