@@ -34,7 +34,7 @@ This project is a **Community Page** application built with **Vite**, **React**,
 
 1. Clone the repository:
    ```bash
-   git clone {urlOfRepoHere}
+   git clone https://github.com/BohdanKhashchak/community-test-task.git
    ```
 2. Navigate to the project directory:
    ```bash
