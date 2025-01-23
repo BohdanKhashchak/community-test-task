@@ -38,7 +38,7 @@ This project is a **Community Page** application built with **Vite**, **React**,
    ```
 2. Navigate to the project directory:
    ```bash
-   cd my-community-app
+   cd community-test-task
    ```
 3. Install dependencies:
    ```bash
